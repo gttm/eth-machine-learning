@@ -1,0 +1,17 @@
+gtouloup@student.ethz.ch
+angelise@student.ethz.ch
+
+Preprocessing
+crop, None, None
+
+Features
+histograms, None, None
+
+Model
+SVM, Nearest Neighbors, Random Forest 
+
+Description
+1) Using project2_feature_generator.py we crop the the volume of the images not containing the brain. 
+2) Using project2_feature_generator.py we divide the image into 9x9x9 blocks and make a histogram
+with 50 bins for each of them. We limit the range of the values into [100, 1600]. These histograms are then concatenated into a list and used as features.
+3) In project2_submission.py we perform feature selection, limiting the number of features to 100. We then use an ensembe of three classifiers (SVM, Nearest Neighbors and Random Forest) who vote with uniform weights for the predictions.
